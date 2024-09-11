@@ -1,0 +1,7 @@
+F:\Work\NLTU\OOAP\Lab1\bin\Debug\Lab1.exe.config
+F:\Work\NLTU\OOAP\Lab1\bin\Debug\Lab1.exe
+F:\Work\NLTU\OOAP\Lab1\bin\Debug\Lab1.pdb
+F:\Work\NLTU\OOAP\Lab1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+F:\Work\NLTU\OOAP\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+F:\Work\NLTU\OOAP\Lab1\obj\Debug\Lab1.exe
+F:\Work\NLTU\OOAP\Lab1\obj\Debug\Lab1.pdb
