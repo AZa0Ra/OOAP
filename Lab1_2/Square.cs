@@ -12,7 +12,17 @@ namespace ooap_lab1
 
         public Square(double side)
         {
-            Side = side;
+            try
+            {
+                if (side > 0)
+                    Side = side;
+                else
+                    Console.WriteLine("Area can't be minus");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Must be positive numbers", e);
+            }
         }
 
         public override double CalculateArea()

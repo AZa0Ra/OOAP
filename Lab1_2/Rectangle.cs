@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,8 +14,20 @@ namespace ooap_lab1
 
         public Rectangle(double width, double height)
         {
-            Width = width;
-            Height = height;
+            try
+            {
+                if (width > 0 && height > 0)
+                {
+                    Width = width;
+                    Height = height;
+                }
+                else
+                    Console.WriteLine("Area can't be minus");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Must be positive numbers", e);
+            }
         }
 
         public override double CalculateArea()
