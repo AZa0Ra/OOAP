@@ -61,6 +61,12 @@ namespace Module1
 
             Client client = new Client(factory);
             client.DisplayOrderDetails();
+
+            Do ob = new Do();
+            ob.DoElse<String>("3");
+
+
         }
+
     }
 }
