@@ -56,9 +56,9 @@ namespace Lab6
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            ISoldier soldier1 = new Soldier("Пупкін");
-            ISoldier soldier2 = new Soldier("Залупкін");
-            ISoldier soldier3 = new Soldier("Хуйкін");
+            ISoldier soldier1 = new Soldier("Солдат 1");
+            ISoldier soldier2 = new Soldier("Солдат 2");
+            ISoldier soldier3 = new Soldier("Солдат 3");
 
             Platoon alphaPlatoon = new Platoon("Альфа");
             alphaPlatoon.Add(soldier1);
@@ -66,8 +66,8 @@ namespace Lab6
             alphaPlatoon.Add(soldier3);
 
             Platoon betaPlatoon = new Platoon("Бета");
-            betaPlatoon.Add(new Soldier("Сидоренко"));
-            betaPlatoon.Add(new Soldier("Мельник"));
+            betaPlatoon.Add(new Soldier("Солдат 4"));
+            betaPlatoon.Add(new Soldier("Солдат 5"));
 
             Platoon company = new Platoon("Компанія 1");
             company.Add(alphaPlatoon);

@@ -12,7 +12,7 @@ namespace Lab5
         public virtual int Range { get; set; }
         public virtual int Power { get; set; }
         public virtual int Weight { get; set; }
-        public virtual double MaxWeight { get; set; } // Максимальна допустима вага
+        public virtual double MaxWeight { get; set; } 
 
         public abstract double Cost();
         public override string ToString()
@@ -29,7 +29,7 @@ namespace Lab5
             Range = 30;
             Power = 40;
             Weight = 5;
-            MaxWeight = 8; // максимальна вага для цієї зброї
+            MaxWeight = 8; 
         }
 
         public override double Cost()
@@ -46,7 +46,7 @@ namespace Lab5
             Range = 15;
             Power = 20;
             Weight = 2;
-            MaxWeight = 4; // максимальна вага для цієї зброї
+            MaxWeight = 4; 
         }
 
         public override double Cost()
@@ -63,7 +63,7 @@ namespace Lab5
             Range = 50;
             Power = 60;
             Weight = 4;
-            MaxWeight = 8; // максимальна вага для цієї зброї
+            MaxWeight = 8; 
         }
 
         public override double Cost()
