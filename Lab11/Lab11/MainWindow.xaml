@@ -13,8 +13,8 @@
                 <TextBox x:Name="SearchBox" Width="200" Margin="5" Text="Введіть товар..." />
                 <Button Content="Шукати" Click="Search_Click" Width="100" Margin="5"/>
             </StackPanel>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10" Height="200" Width="1000" HorizontalAlignment="Left">
-                <ListBox x:Name="PriceListBox" Width="1010"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10" Height="200" HorizontalAlignment="Stretch">
+                <ListBox x:Name="PriceListBox"/>
             </ScrollViewer>
             <wv2:WebView2 x:Name="webView" Margin="5" Height="515"/>
 

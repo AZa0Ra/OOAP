@@ -40,7 +40,7 @@ namespace Lab11
             {
                 try
                 {
-                    await Task.Delay(3000); // зачекай доки контент завантажиться
+                    await Task.Delay(3000);
 
                     string script = @"
         (function() {
@@ -54,7 +54,7 @@ namespace Lab11
                 if (titleElement && priceElement) {
                     let title = titleElement.textContent.trim();
                     let price = priceElement.textContent.trim().replace(/\s+/g, ' ');
-                    results.push(`${title} - ${price}`);
+                    results.push(`${title}|||${price}`);
                 }
             });
 
@@ -66,14 +66,26 @@ namespace Lab11
 
                     var items = result.Split(';', StringSplitOptions.RemoveEmptyEntries);
 
-                    PriceListBox.ItemsSource = items;
+                    // Fork
+                    var tasks = items.Select(item => Task.Run(() =>
+                    {
+                        var parts = item.Split("|||");
+                        if (parts.Length == 2)
+                            return $"{parts[0]} - {parts[1]}";
+                        else
+                            return "Невідомий товар";
+                    })).ToArray();
+
+                    // Join
+                    var processedItems = await Task.WhenAll(tasks);
+
+                    PriceListBox.ItemsSource = processedItems;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Помилка: {ex.Message}");
                 }
             };
-
         }
     }
 }
